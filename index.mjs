@@ -1,7 +1,7 @@
 import fs from 'node:fs/promises';
 import sharp from 'sharp';
 
-const buf = await sharp('duckdance.gif', { animated: true })
+const buf = await sharp('emergency.png', { animated: true })
   .resize({
     height: 128,
     withoutEnlargement: true,
@@ -15,4 +15,4 @@ const buf = await sharp('duckdance.gif', { animated: true })
   })
   .toBuffer();
 
-fs.writeFile('duckdance.webp', buf);
+fs.writeFile('emergency.webp', buf);
